@@ -11,17 +11,20 @@ namespace WindowsProject
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         private readonly DispatcherTimer showTimer = new DispatcherTimer();
 
         private int _seconds = 180;
+
         /// <summary>
         /// 初始化
         /// </summary>
         public MainWindow()
         {
             InitializeComponent();
+
+            this.ShowInTaskbar = true;
 
             {
                 //定时器
@@ -34,6 +37,7 @@ namespace WindowsProject
                 this.MouseMove += Window_MouseMove;
             }
         }
+
         /// <summary>
         /// 关机
         /// </summary>
@@ -47,14 +51,13 @@ namespace WindowsProject
                 ShutDown.DoExitWin(ShutDown.EWX_SHUTDOWN);
                 // System.Diagnostics.Process.Start("shutdown.exe", "-s -t 0");
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Console.WriteLine(e);
                 showTimer.Start();
                 _seconds = 3;
                 throw;
             }
-            
         }
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace WindowsProject
         }
 
         #region 控件点击事件
+
         /// <summary>
         /// 取消关机
         /// </summary>
@@ -74,7 +78,7 @@ namespace WindowsProject
         private void cancel_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("延迟关机,每取消一次延迟一小时", "确认", MessageBoxButton.OKCancel);
-            if (result == MessageBoxResult.OK)
+            if(result == MessageBoxResult.OK)
             {
                 AddHours();
             }
@@ -88,15 +92,17 @@ namespace WindowsProject
         private void confirm_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("立即关机 ？", "确认", MessageBoxButton.OKCancel, MessageBoxImage.Information);
-            if (result == MessageBoxResult.OK)
+            if(result == MessageBoxResult.OK)
             {
                 showTimer.Stop();
                 CloseWindows();
             }
         }
-        #endregion
+
+        #endregion 控件点击事件
 
         #region Event
+
         /// <summary>
         /// 定时器事件
         /// </summary>
@@ -107,16 +113,18 @@ namespace WindowsProject
             _seconds--;
             this.Label1.Content = $"关机倒计时 {_seconds} 秒";
 
-            if (_seconds == 10)
+            if(_seconds == 10)
             {
                 //关机时间剩余10秒 提醒一次
                 this.WindowState = WindowState.Normal;
+                this.Topmost = true;
             }
-            else if (_seconds <= 0)
+            else if(_seconds <= 0)
             {
                 CloseWindows();
             }
         }
+
         /// <summary>
         /// 鼠标拖动窗口（设置Window 的MouseMove事件）
         /// </summary>
@@ -124,17 +132,18 @@ namespace WindowsProject
         /// <param name="e"></param>
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
+            if(e.LeftButton == MouseButtonState.Pressed)
             {
                 this.DragMove();
             }
         }
-        
-        #endregion
+
+        #endregion Event
 
         #region 最大 最小 关闭
+
         /// <summary>
-        /// 最小化 
+        /// 最小化
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -142,8 +151,9 @@ namespace WindowsProject
         {
             this.WindowState = System.Windows.WindowState.Minimized;
         }
+
         /// <summary>
-        /// 最大化 
+        /// 最大化
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -151,22 +161,22 @@ namespace WindowsProject
         {
             this.WindowState = System.Windows.WindowState.Maximized;
         }
+
         /// <summary>
-        /// 关闭 
+        /// 关闭
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void close_btn_Click(object sender, RoutedEventArgs e)
         {
             var ret = MessageBox.Show("Are you sure to exit audit?", "Alert", MessageBoxButton.YesNo);
-            if (ret == MessageBoxResult.Yes)
+            if(ret == MessageBoxResult.Yes)
             {
-                //终止所有线程 
+                //终止所有线程
                 Environment.Exit(Environment.ExitCode);
             }
         }
 
-        #endregion
-
+        #endregion 最大 最小 关闭
     }
 }
