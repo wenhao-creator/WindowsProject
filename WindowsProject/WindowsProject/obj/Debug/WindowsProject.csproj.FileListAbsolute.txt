@@ -1,0 +1,14 @@
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.exe.config
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.exe
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.pdb
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\MainWindow.g.cs
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\App.g.cs
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject_MarkupCompile.cache
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject_MarkupCompile.lref
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\MainWindow.baml
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.g.resources
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.Properties.Resources.resources
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.csproj.GenerateResource.cache
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.csproj.CoreCompileInputs.cache
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.exe
+F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.pdb
