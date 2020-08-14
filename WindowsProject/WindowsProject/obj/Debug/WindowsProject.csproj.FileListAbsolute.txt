@@ -15,7 +15,6 @@ F:\source\tests\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsPr
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.exe.config
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.exe
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\bin\Debug\WindowsProject.pdb
-F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject.csprojAssemblyReference.cache
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\obj\Debug\MainWindow.g.cs
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\obj\Debug\App.g.cs
 F:\source\GetHub\WindowsProject\WindowsProject\WindowsProject\obj\Debug\WindowsProject_MarkupCompile.cache
